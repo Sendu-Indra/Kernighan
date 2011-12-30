@@ -45,9 +45,7 @@ int htoi( char* s )
         i++;
         
         if( s[i] != 'X' && s[i] != 'x' )
-        {
             return -1;
-        }
 
         i++;
     }
@@ -56,13 +54,9 @@ int htoi( char* s )
     while( s[i] != '\0' )
     {
         if( ( s[i] >= '0' && s[i] <= '9') || ( s[i] >= 'A' && s[i] <= 'F' ) || ( s[i] >= 'a' && s[i] <= 'f' ) )
-        {
             result += ctoi( i, s[i] );
-        }
         else
-        {
             return -1;
-        }
 
         i++;
     }
